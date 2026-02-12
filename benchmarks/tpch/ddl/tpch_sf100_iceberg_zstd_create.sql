@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS "iceberg"."tpch_sf100_parquet_iceberg" WITH (location='s3a://presto-workload-v2/tpch-sf100-parquet-iceberg/');
+CREATE SCHEMA IF NOT EXISTS "iceberg"."tpch_sf100_parquet_iceberg_zstd" WITH (location='s3a://presto-workload-v2/tpch-sf100-parquet-iceberg-zstd/');
 
-USE iceberg.tpch_sf100_parquet_iceberg;
+USE iceberg.tpch_sf100_parquet_iceberg_zstd;
 SET SESSION iceberg.compression_codec='ZSTD';
 create table IF NOT EXISTS nation with(format='PARQUET') as select * from tpch.sf100.nation;
 create table IF NOT EXISTS lineitem with(format='PARQUET') as select * from tpch.sf100.lineitem;
