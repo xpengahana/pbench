@@ -11,15 +11,6 @@ create table IF NOT EXISTS supplier with(format='PARQUET') as select * from tpch
 create table IF NOT EXISTS region with(format='PARQUET') as select * from tpch.sf100.region;
 create table IF NOT EXISTS partsupp with(format='PARQUET') as select * from tpch.sf100.partsupp;
 
--- create table IF NOT EXISTS nation with(format='PARQUET') as select * from hive.tpch_sf100_parquet.nation;
--- create table IF NOT EXISTS lineitem with(format='PARQUET') as select * from hive.tpch_sf100_parquet.lineitem;
--- create table IF NOT EXISTS orders with(format='PARQUET') as select * from hive.tpch_sf100_parquet.orders;
--- create table IF NOT EXISTS customer with(format='PARQUET') as select * from hive.tpch_sf100_parquet.customer;
--- create table IF NOT EXISTS part with(format='PARQUET') as select * from hive.tpch_sf100_parquet.part;
--- create table IF NOT EXISTS supplier with(format='PARQUET') as select * from hive.tpch_sf100_parquet.supplier;
--- create table IF NOT EXISTS region with(format='PARQUET') as select * from hive.tpch_sf100_parquet.region;
--- create table IF NOT EXISTS partsupp with(format='PARQUET') as select * from hive.tpch_sf100_parquet.partsupp;
-
 analyze nation;
 analyze lineitem;
 analyze orders;
